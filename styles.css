@@ -1,3 +1,21 @@
+@font-face {
+    font-family: Myfont;
+    src: url(fonts/BeaufortforLOL-Regular.ttf),
+        url(fonts/BeaufortforLOL-Bold.ttf),
+        url(fonts/BeaufortforLOL-BoldItalic.ttf),
+        url(fonts/BeaufortforLOL-Heavy.ttf),
+        url(fonts/BeaufortforLOL-HeavyItalic.ttf),
+        url(fonts/BeaufortforLOL-Italic.ttf),
+        url(fonts/BeaufortforLOL-Light.ttf),
+        url(fonts/BeaufortforLOL-LightItalic.ttf),
+        url(fonts/BeaufortforLOL-Medium.ttf),
+        url(fonts/BeaufortforLOL-MediumItalic.ttf);
+}
+
+* {
+    font-family: Myfont;
+}
+
 .primary_container {
     display: flex;
     width: 100%;
@@ -7,8 +25,12 @@
     align-items: center;
 }
 
+h1, h2, h3, label {
+    color: #c89b3c;
+}
+
 h2 {
-    margin-top: 75px;  
+    margin-top: 75px;
 }
 
 .labels {
@@ -21,6 +43,11 @@ h2 {
 
 .labelComputer {
     margin-left: 150px;
+}
+
+.labels > * {
+    color: #c89b3c;
+    font-weight: bold;
 }
 
 .scores {
@@ -61,7 +88,7 @@ h2 {
     width: 80px;
     font-size: large;
     font-weight: bolder;
-    color: crimson;
+    color: #c89b3c;
     text-align: center;
     line-height: 180px;
 }

@@ -1,0 +1,85 @@
+.primary_container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 75px;  
+}
+
+.labels {
+    margin-top: 25px;
+}
+
+.labelPlayer {
+    margin-right: 300px;
+}
+
+.labelComputer {
+    margin-left: 150px;
+}
+
+.scores {
+    display: flex;
+    flex: auto;
+}
+
+.playerScore {
+    margin-right: 150px;
+}
+
+.computerScore {
+    margin-left: 150px;
+}
+
+.scores>* {
+    height: auto;
+    width: 100px;
+    border: 5px solid black;
+    text-align: center;
+    font-size: 70px;
+}
+
+.scores .winnerDisplay {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 26px;
+    border: 0;
+}
+
+/* .buttons {
+
+} */
+
+.buttons>* {
+    flex-direction: row;
+    height: 80px;
+    width: 80px;
+    font-size: large;
+    font-weight: bolder;
+    color: crimson;
+    text-align: center;
+    line-height: 180px;
+}
+
+#rock {
+    background-image: url(img/tft5_item_zzrotportalradiant.png);
+    margin-right: 20px;
+}
+
+#paper {
+    background-image: url(img/tft_item_morellonomicon.png);
+}
+
+#scissor {
+    background-image: url(img/tft_item_statikkshiv.png);
+    margin-left: 20px;
+}
+
+#reset {
+    margin-top: 20px;
+}

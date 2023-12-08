@@ -3,94 +3,35 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
         <title>Mini Game</title>
     </head>
     <body>
-        <script>
-            game();
+        <div class="primary_container">
+            <h1>Rock Paper Scissor</h1>
+            <label>Riot version</label>
+            <h3></h3>
+            <div class="game-background">
+                <img src="img/Avarosa_Arena.jpg" alt="Avarosa arena" />
+            </div>
+            <div class="labels">
+                <span class="labelPlayer">Player</span>
+                <span class="labelComputer">Computer</span>
+            </div>
+            <div class="scores">
+                <div class="playerScore"></div>
+                <div class="winnerDisplay"></div>
+                <div class="computerScore"></div>
+            </div>
+            <h2>Choose Your Weapon</h2>
+            <div class="buttons">
+                <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="scissor">Scissor</button>
+            </div>
+            <div><button id="reset">Reset</button></div>
+        </div>
 
-            function getComputerChoice() {
-                let randomnchoice = Math.floor(getRandomArbitrary(0, 3));
-                switch (randomnchoice) {
-                    case 0:
-                        return "rock";
-                        break;
-                    case 1:
-                        return "paper";
-                        break;
-                    case 2:
-                        return "scissor";
-                        break;
-                }
-            }
-
-            function getRandomArbitrary(min, max) {
-                return Math.random() * (max - min) + min;
-            }
-
-            function playRound(playerSelection, computerSelection) {
-                if (playerSelection == computerSelection) {
-                    computerSelection = getComputerChoice();
-                    playerSelection = prompt(
-                        "Rock Paper or Scissor ?"
-                    ).toLowerCase();
-                }
-
-                if (
-                    playerSelection == "rock" &&
-                    computerSelection == "scissor"
-                ) {
-                    console.log("You win!");
-                    return 1;
-                } else if (
-                    playerSelection == "paper" &&
-                    computerSelection == "rock"
-                ) {
-                    console.log("You win!");
-                    return 1;
-                } else if (
-                    playerSelection == "scissor" &&
-                    computerSelection == "paper"
-                ) {
-                    console.log("You win!");
-                    return 1;
-                } else {
-                    console.log("You loose!");
-                    return 0;
-                }
-            }
-
-            function game() {
-                let scoreCountPlayer = 0;
-                let scoreCountComputer = 0;
-
-                for (let roundCount = 1; roundCount <= 5; roundCount++) {
-                    let computerSelection = getComputerChoice();
-                    let playerSelection = prompt(
-                        "Rock Paper or Scissor ?"
-                    ).toLowerCase();
-
-                    if (playRound(playerSelection, computerSelection) == true) {
-                        scoreCountPlayer += 1;
-                        console.log(
-                            `Score: ${scoreCountPlayer}/${scoreCountComputer}`
-                        );
-                    } else {
-                        scoreCountComputer += 1;
-                        console.log(
-                            `Score: ${scoreCountPlayer}/${scoreCountComputer}`
-                        );
-                    }
-                    if (scoreCountPlayer == 3) {
-                        console.log("Player Wins!");
-                        break;
-                    }
-                    if (scoreCountComputer == 3) {
-                        console.log("Computer Wins!");
-                        break;
-                    }
-                }
-            }
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>
